@@ -1,11 +1,3 @@
-// components
-// styling
-// primary app colour index.css - placeholder global var
-// Rounded
-// BEM
-// classNames
-// job id placeholder yvBkjnyBVPXdQDOUa1Ic
-
 import { useState, useEffect } from 'react';
 import EditableRow from '../components/forms/EditableRow';
 import ReadOnlyRow from '../components/forms/ReadOnlyRow';
@@ -64,8 +56,7 @@ const MaterialsList = function (props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // const materialList = { materialName, unit, price };
-    // setMaterials([...materials, materialList]);
+
     setMaterialName('');
     setUnit('');
     setPrice('');
@@ -106,8 +97,6 @@ const MaterialsList = function (props) {
 
     newMaterials[index] = editedMaterial;
 
-    // setMaterials(newMaterials);
-
     // updateMaterial - PATCH request to firestore
     databaseService.updateMaterial(jobId, editMaterialId, editedMaterial).then(() => {
       setHasChanged(true);
@@ -140,8 +129,6 @@ const MaterialsList = function (props) {
 
     newMaterials.splice(index, 1);
 
-    // setMaterials(newMaterials);
-
     console.log(materialId, '<<<delete');
     databaseService.deleteMaterial(jobId, materialId).then(() => {
       setHasChanged(true);
@@ -163,8 +150,6 @@ const MaterialsList = function (props) {
   return (
     <div className="container__MaterialsList">
       <h1>Materials</h1>
-      {/* materials state, iterate through that the return price etc */}
-      {/* check if someone is 0 if 0 put basic field in there, otherwise pop with mat */}
       <div className="table__materialsList">
         <form onSubmit={handleEditFormSubmit}>
           <table>
@@ -208,9 +193,7 @@ const MaterialsList = function (props) {
       <div className="form__container__materialsList">
         <h2>Add new Materials</h2>
 
-        {/* Put labels in */}
         <form onSubmit={handleSubmit} className="form__materialsList">
-          {/* Populate material list don't mutate the state,once subitted, clear the state   */}
           <input
             type="text"
             required
