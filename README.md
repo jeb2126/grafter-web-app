@@ -23,7 +23,18 @@ Once done press enter to create a local clone of the repository.
 
 To ensure the correct project folder is open type into the Terminal: cd grafter-web-app
 
-### Step 3 - Run app in development mode
+### Step 3 - create dotenv file
+
+In order to link the project to the firesbase store create a file called .env and insert the following code into it:
+
+REACT_APP_API_KEY=AIzaSyAkIICk8WweTPH68ElHnzKe-ryznnj-WVs
+REACT_APP_AUTH_DOMAI=grafter-web-app.firebaseapp.com
+REACT_APP_PROJECT_ID=grafter-web-app
+REACT_APP_STORAGE_BUCKET=grafter-web-app.appspot.com
+REACT_APP_SENDER_ID=90990024519
+REACT_APP_APP_ID=1:90990024519:web:3d0976737e67bb17659e62
+
+### Step 4 - Run app in development mode
 
 Once inside the project folder type into the Terminal: npm start
 This will open http://localhost:3000 to view the app in the browser
