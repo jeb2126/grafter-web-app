@@ -28,7 +28,7 @@ To ensure the correct project folder is open type into the Terminal: cd grafter-
 In order to link the project to the firesbase store create a file called .env and insert the following code into it:
 
 REACT_APP_API_KEY=AIzaSyAkIICk8WweTPH68ElHnzKe-ryznnj-WVs
-REACT_APP_AUTH_DOMAI=grafter-web-app.firebaseapp.com
+REACT_APP_AUTH_DOMAIN=grafter-web-app.firebaseapp.com
 REACT_APP_PROJECT_ID=grafter-web-app
 REACT_APP_STORAGE_BUCKET=grafter-web-app.appspot.com
 REACT_APP_SENDER_ID=90990024519
